@@ -1,0 +1,61 @@
+----------------------------------
+-- Santiago Ducós - 5.179.987-6 --
+----------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+El motor de base de datos que se implemento para el obligatorio es MySql. Dentro de la carpeta obligatorio, se encuentra un archivo llamado obligatorio_php.sql,
+dentro de este se encuentra la esctructura de tablas y las restricciones (foreing key) que se utilizaron para resolver la problematica planteada.
+
+Para ejecutar el contenido de obligatorio_php.sql hacer lo siguiente:
+1-) Abrir workbench.
+2-) Crear una base de datos (ejemplo -> empresa_transporte).
+3-) Hacer click derecho sobre la base de datos creada y seleccionar 'Set as Default Schema' (va quedar con una fuente en negrita).
+3-) Abrir el archivo obligatorio_php.sql con un editor de texto (notas, code, sublime, notepad++, etc).
+4-) Copiar el contenido dentro del archivo.
+5-) Volver a workbench.
+6-) Hacer click en file y seleccionar 'New query Tab'.
+7-) En la ventana desplagada pegar el contenido copiado.
+8-) Ejecutar; para esto: hacer click en el rayo de la barra de herramientas de la ventana despleguada.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Para ejecutar el sistema hacer lo siguiente:
+1-) Abrir workbench.
+2-) Hacer click en 'Database' y luego en 'Connect to Database'.
+3-) Hacer click en 'Store in Vault..' e ingresar la contraseña de mysql (la seleccionada en la instalacion de mysql).
+4-) Hacer click en 'ok' a la ventana emergente.
+5-) Hacer click en 'ok' a la ventana de 'Connect to Database'.
+
+6-) Ir a la siguiente ruta: EmpresaTransporte/modelo/
+    Abrir el archivo: Conexion.php
+    Modificar las constantes segun su configuracion de MySql y el nombre que se le puso a la base de satos.
+    Ejemplo:
+    const SERVIDOR = "servidor (si esta ejecutando todo en su maquina dejar; localhost)";
+    const USUARIO = "usuario de mysql";
+    const CONTRASEÑA = "contraseña de mysql";
+    const BD = "nombre de la base de datos";
+
+3-) Levantar el servidor sea wamp o xampp
+
+4-) Mover la carpeta EmpresaTransporte a www o htdocs segun el servidor
+
+5-) Ir a la siguiente ruta: EmpresaTransporte/vista/
+    Levantar en el navegador el archivo: index.php
+
+6-) ¡LA APLICACION ESTA LISTA PARA USAR!
+
+7-) Si se quiere comprobar el funcionamiento del visitante:
+    Ir a Workbench -> Abrir la base de datos proyecto_php -> Mostrar los datos de la tabla paquete -> Copiar un codigo de un paquete -> Pegar el codigo del paquete
+    en la vista del visitante (EmpresaTransporte/vista/visitante/mostrarPaqueteVisitante.php).
+
+8-) Para comprobar el funcionamiento del transportista:
+    Ir a Workbench -> Abrir la base de datos proyecto_php -> Mostrar los datos de la tabla transportista -> Copiar la cedula de un transportista
+    (DATO IMPORTANTE: EL PIN DE TODOS LOS TRANSPORTISTAS ES = 123456) -> Ingresar los datos en el login de usuario (EmpresaTransporte/vista/loginUsuario.php).
+
+9-) Para comprobar el funcionamiento del encargado:
+    Ir a Workbench -> Abrir la base de datos proyecto_php -> Mostrar los datos de la tabla encargado -> Copiar la cedula de un encargado (solo hay uno)
+    (DATO IMPORTANTE: EL PIN DE TODOS LOS ENCARGADOS ES = 123456) -> Ingresar los datos en el login de usuario (EmpresaTransporte/vista/loginUsuario.php).
+
+
+
+
